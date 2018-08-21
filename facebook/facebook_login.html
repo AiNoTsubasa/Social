@@ -19,9 +19,9 @@
 		      		xfbml      : true,
 		      		version    : 'v3.1'
 		    	});
-		      
-		    	FB.AppEvents.logPageView();   
-		      
+
+		    	FB.AppEvents.logPageView();
+
 		  	};
 
 		  	(function(d, s, id){
@@ -43,7 +43,7 @@
 			{
 
 				if(fbLoginStatus == false) {
-					
+
 					if (response.status == 'connected') {
 						fbLoginStatus = true;
 						getCurrentUserInfo(response);
@@ -60,11 +60,11 @@
 				} else if(fbLoginStatus == true) {
 					getCurrentUserInfo(response);
 				}
-				
+
 			}
 
 			function getCurrentUserInfo() {
-				
+
 				FB.api('/me?fields=name,email,first_name,last_name,id', function(userInfo) {
 					var result = '';
 					result+= "ID: "+userInfo.id+"\r";
@@ -73,13 +73,15 @@
 					result+= "E-mail: "+userInfo.email+"\r";
 					document.getElementById("result").value = result;
 				});
-				
+
 			}
 		</script>
 
 		<button onclick="checkFbLoginState();">Login with Facebook</button>
 		<br>
 		Result: <textarea id="result"></textarea>
+		<br><br><br>
+		อ่านคำอธิบายโค้ดได้ที่ <a href="https://ai-no-tsubasa.blogspot.com/2018/08/how-to-integrate-facebook-login-into-your-site.html">AiNoTsubasa's Blog</a>
 
 
 	</body>
