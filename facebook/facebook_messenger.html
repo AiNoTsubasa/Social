@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Facebook Messenger</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <meta name="description" content="Facebook Messenger">
+	    <meta name="author" content="AiNoTsubasa">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css"></style>
+	</head>
+	<body>
+
+		<!-- Load Facebook SDK for JavaScript -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/th_TH/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<!-- Your customer chat code -->
+		<div class="fb-customerchat"
+		  attribution=setup_tool
+		  page_id="{page-id}"
+		  theme_color="#e68585"
+		  logged_in_greeting="สวัสดีครับ"
+		  logged_out_greeting="สวัสดีครับ">
+		</div>
+
+		อ่านคำอธิบายโค้ดได้ที่ <a href="https://ai-no-tsubasa.blogspot.com/2018/08/how-to-integrate-facebook-messenger-into-your-website.html">AiNoTsubasa's Blog</a>
+
+
+	</body>
+</html>
